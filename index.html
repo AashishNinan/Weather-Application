@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Weather App</title>
+	 <script src="jquery-3.4.1.min.js"></script>
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	 
+	 <link rel="stylesheet" href="style.css">
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+	<img id="Back" src="pic.jpg">
+	<div id="Center" class="text-primary" >
+		<button id="getloc"  class="btn btn-outline-success" onclick="getLocation()">This is the weather at your current location.</button><br/>
+		<p id="demo"></p>
+		<strong><span id="location"class="text-white"></span></strong><br/>
+		<h1 id="temp" class="text-warning"></h1><br/>
+        <img src="" id="weather-icon"><br/>
+        <span id="condition"></span><br/>
+        
+        <button id="btton" type="button" class="btn btn-outline-info" onclick="convert()">F</button>
+        <script type="text/javascript">
+        	function convert (){
+              change = document.getElementById("btton");
+              if(change.innerHTML== 'C'){
+                change.innerHTML='F';
+                $('#temp').html(temp + "&deg;C");
+              }
+              else if(change.innerHTML=='F'){
+                change.innerHTML='C';
+                $('#temp').html(tempf + "&deg;F");
+              }
+
+            }
+        </script>
+        
+	</div>	
+  <script src="main.js"></script>
+ </body>
+ </html>
